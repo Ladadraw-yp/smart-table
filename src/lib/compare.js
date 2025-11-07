@@ -147,9 +147,10 @@ const rules = {
     // одну и ту же строку в нескольких полях объекта, что очень полезно
     // для реализации функций поиска в приложениях
     searchMultipleFields: (searchKey, searchFields, caseSensitive = false) => (key, sourceValue, targetValue, source, target) => {
-        // Применять это правило только при обработке ключа поиска
+        
+        // Применять это правило только при обработке ключа поиска     
         if (key !== searchKey) {
-            return { continue: true };
+             return { continue: true };
         }
 
         // Пропустить, если поисковый запрос пуст
