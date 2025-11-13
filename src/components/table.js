@@ -32,14 +32,6 @@ export function initTable(settings, onAction) {
 
     root.container.addEventListener('submit', (e) => {    
         e.preventDefault();
-        // // Очистка поля при нажатии на кнопку clear
-        // if (e.submitter?.name === 'clear' && e.submitter.dataset.field) {
-        //     const field = e.target.querySelector(`[name="${e.submitter.dataset.field}"]`);
-        //     if (field) {
-        //         field.value = '';
-        //         if (field.tagName === 'SELECT') field.selectedIndex = 0;
-        //     }
-        // }
         onAction(e.submitter);
     });
 
